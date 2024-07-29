@@ -3,7 +3,8 @@
   "version": "",
   "main": "app.js",
   "engines": {
-    "node": "v14.x"
+    "node": "v18.12.1",
+    "npm": "8.19.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
