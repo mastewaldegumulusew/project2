@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--[ Use nav bar on every page ]-->
+  <%- include('../includes/head.ejs') %> <%- include('../includes/nav.ejs') %>
+  <body>
+    <div>
+      <h1 style="margin-left: 600px;">Login</h1>
+      <!--[ Form for logging in ]-->
+      <form action="/login" method="POST">
+        <div class="box small-box">
+          
+            <span>
+              <label for="username">Username:</label>
+              <input required type="text" name="username" id="username" />
+              
+            </span>
+            <span>
+              <label for="password">Password:</label>
+              <input required type="password" name="password" id="password" />
+            
+            </span>
+           
+       
+          <div class="small">
+            <button id="login" type="submit" name="submit" value="login">Login</button>
+            <br />
+            <button id="login-back" type="submit" name="submit" class="small" value="back">Back</button>
+          </div>
+        </div>
+      </form>
+      <!--[ Info msg ]-->
+      <br /><% if (message){ %> <% if (message.text){ %><span style="color: <%=message.color %>"> <%= message.text %> </span><% }
+      %><% } %>
+    </div>
+  </body>
+</html>
